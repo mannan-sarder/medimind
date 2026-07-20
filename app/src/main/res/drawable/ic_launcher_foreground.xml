@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Adaptive icon foreground:
+    - viewportWidth/Height = 108 (standard)
+    - Content must fit within center 72x72 safe zone (18dp margin each side)
+    - Original SVG content bounds: x=295,y=220 to x=832,y=752 => w=537, h=532
+    - We scale to fit 66x66 (leaving ~21dp safe margin) and center at 54,54
+    - scale = 66/537 = 0.1229
+    - offset_x = 54 - (295+537/2)*0.1229 = 54 - 512*0.1229 = 54 - 62.9 = -8.9 ≈ -9
+    - offset_y = 54 - (220+532/2)*0.1229 = 54 - 486*0.1229 = 54 - 59.7 = -5.7 ≈ -6
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <group
+        android:scaleX="0.1229"
+        android:scaleY="0.1229"
+        android:translateX="-9"
+        android:translateY="-6">
+
+        <!-- Document body -->
+        <path
+            android:fillColor="#F8FAFC"
+            android:strokeColor="#0F3B75"
+            android:strokeWidth="12"
+            android:pathData="M340,220 H590 L700,330 V690 C700,715 680,735 655,735 H340 C315,735 295,715 295,690 V265 C295,240 315,220 340,220 Z" />
+
+        <!-- Corner fold -->
+        <path
+            android:fillColor="#DDEAFE"
+            android:strokeColor="#0F3B75"
+            android:strokeWidth="12"
+            android:pathData="M590,220 V310 C590,325 602,338 618,338 H700" />
+
+        <!-- Plus horizontal bar -->
+        <path
+            android:fillColor="#23C6A8"
+            android:pathData="M385,290 H475 C479.418,290 483,293.582 483,298 V315 C483,319.418 479.418,315 475,315 H385 C380.582,315 377,311.418 377,307 V298 C377,293.582 380.582,290 385,290 Z" />
+
+        <!-- Plus vertical bar -->
+        <path
+            android:fillColor="#23C6A8"
+            android:pathData="M417,258 H442 C446.418,258 450,261.582 450,266 V348 C450,352.418 446.418,348 442,348 H417 C412.582,348 409,344.418 409,340 V266 C409,261.582 412.582,258 417,258 Z" />
+
+        <!-- Text line 1 -->
+        <path
+            android:fillColor="#CBD5E1"
+            android:pathData="M385,390 H565 C569.418,390 573,393.582 573,396 V402 C573,405.418 569.418,408 565,408 H385 C380.582,408 377,404.418 377,402 V396 C377,393.582 380.582,390 385,390 Z" />
+
+        <!-- Text line 2 -->
+        <path
+            android:fillColor="#CBD5E1"
+            android:pathData="M385,430 H595 C599.418,430 603,433.582 603,436 V442 C603,445.418 599.418,448 595,448 H385 C380.582,448 377,444.418 377,442 V436 C377,433.582 380.582,430 385,430 Z" />
+
+        <!-- Text line 3 -->
+        <path
+            android:fillColor="#CBD5E1"
+            android:pathData="M385,470 H545 C549.418,470 553,473.582 553,476 V482 C553,485.418 549.418,488 545,488 H385 C380.582,488 377,484.418 377,482 V476 C377,473.582 380.582,470 385,470 Z" />
+
+        <!-- ECG line -->
+        <path
+            android:strokeColor="#23C6A8"
+            android:strokeWidth="10"
+            android:strokeLineCap="round"
+            android:strokeLineJoin="round"
+            android:fillColor="#00000000"
+            android:pathData="M300,530 H370 L395,495 L425,565 L455,520 H540" />
+
+        <!-- Right line 1 -->
+        <path
+            android:strokeColor="#23C6A8"
+            android:strokeWidth="10"
+            android:strokeLineCap="round"
+            android:fillColor="#00000000"
+            android:pathData="M700,400 H790" />
+
+        <!-- Right line 2 -->
+        <path
+            android:strokeColor="#23C6A8"
+            android:strokeWidth="10"
+            android:strokeLineCap="round"
+            android:fillColor="#00000000"
+            android:pathData="M700,470 H820" />
+
+        <!-- Right line 3 -->
+        <path
+            android:strokeColor="#23C6A8"
+            android:strokeWidth="10"
+            android:strokeLineCap="round"
+            android:fillColor="#00000000"
+            android:pathData="M700,540 H780" />
+
+        <!-- Dot line 1 -->
+        <path
+            android:fillColor="#23C6A8"
+            android:pathData="M790,400 m-12,0 a12,12 0 1,0 24,0 a12,12 0 1,0 -24,0" />
+
+        <!-- Dot line 2 -->
+        <path
+            android:fillColor="#23C6A8"
+            android:pathData="M820,470 m-12,0 a12,12 0 1,0 24,0 a12,12 0 1,0 -24,0" />
+
+        <!-- Dot line 3 -->
+        <path
+            android:fillColor="#23C6A8"
+            android:pathData="M780,540 m-12,0 a12,12 0 1,0 24,0 a12,12 0 1,0 -24,0" />
+
+        <!-- Search outer circle -->
+        <path
+            android:fillColor="#E0F2FE"
+            android:strokeColor="#0B5ED7"
+            android:strokeWidth="18"
+            android:pathData="M610,530 m-120,0 a120,120 0 1,0 240,0 a120,120 0 1,0 -240,0" />
+
+        <!-- Search inner circle -->
+        <path
+            android:fillColor="#D1FAE5"
+            android:pathData="M610,530 m-80,0 a80,80 0 1,0 160,0 a80,80 0 1,0 -160,0" />
+
+        <!-- Search plus horizontal -->
+        <path
+            android:fillColor="#23C6A8"
+            android:pathData="M575,518 H645 C649.418,518 653,521.582 653,526 V538 C653,542.418 649.418,546 645,546 H575 C570.582,546 567,542.418 567,538 V526 C567,521.582 570.582,518 575,518 Z" />
+
+        <!-- Search plus vertical -->
+        <path
+            android:fillColor="#23C6A8"
+            android:pathData="M600,493 H620 C624.418,493 628,496.582 628,500 V563 C628,567.418 624.418,571 620,571 H600 C595.582,571 592,567.418 592,563 V500 C592,496.582 595.582,493 600,493 Z" />
+
+        <!-- Magnifier handle rotated -45deg -->
+        <group
+            android:pivotX="500"
+            android:pivotY="620"
+            android:rotation="-45">
+            <path
+                android:fillColor="#0B5ED7"
+                android:pathData="M478,620 H523 C533.493,620 543,629.507 543,640 V740 C543,750.493 533.493,760 523,760 H478 C467.507,760 458,750.493 458,740 V640 C458,629.507 467.507,620 478,620 Z" />
+        </group>
+
+    </group>
+
+</vector>

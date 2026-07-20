@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Background box -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:startColor="#e4f3ff"
+                android:endColor="#bcdcff"
+                android:angle="135"/>
+            <corners android:radius="18dp"/>
+        </shape>
+    </item>
+
+    <!-- Icon layer -->
+    <item
+        android:left="2dp"
+        android:top="0dp"
+        android:right="2dp"
+        android:bottom="0dp">
+        <vector
+            android:width="32dp"
+            android:height="32dp"
+            android:viewportWidth="52"
+            android:viewportHeight="52">
+
+            <!-- Bell body fill -->
+            <path
+                android:fillColor="#2D3580"
+                android:fillAlpha="0.15"
+                android:pathData="M26,11 C19,11 15,17 15,24 L15,34 L11,38 L41,38 L37,34 L37,24 C37,17 33,11 26,11 Z"/>
+
+            <!-- Bell body outline -->
+            <path
+                android:fillColor="#00000000"
+                android:strokeColor="#2D3580"
+                android:strokeWidth="3"
+                android:strokeLineCap="round"
+                android:strokeLineJoin="round"
+                android:pathData="M26,11 C19,11 15,17 15,24 L15,34 L11,38 L41,38 L37,34 L37,24 C37,17 33,11 26,11 Z"/>
+
+            <!-- Top stem -->
+            <path
+                android:fillColor="#2D3580"
+                android:pathData="M24,8 L28,8 L28,13 L24,13 Z"/>
+
+            <!-- Rim bar -->
+            <path
+                android:fillColor="#2D3580"
+                android:pathData="M10,36 L42,36 L42,41 Q42,41 26,41 Q10,41 10,41 Z"/>
+
+            <!-- Clapper -->
+            <path
+                android:fillColor="#6070E8"
+                android:pathData="M22,41 A4,3 0 1,0 30,41 Z"/>
+
+            <!-- Notification dot outer -->
+            <path
+                android:fillColor="#6070E8"
+                android:pathData="M32,9 A5,5 0 1,1 31.999,9 Z"/>
+
+            <!-- Notification dot inner white -->
+            <path
+                android:fillColor="#FFFFFF"
+                android:pathData="M33.5,9 A2.5,2.5 0 1,1 33.499,9 Z"/>
+
+        </vector>
+    </item>
+
+</layer-list>

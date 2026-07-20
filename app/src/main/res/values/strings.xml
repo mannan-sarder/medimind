@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">medimind</string>
+    <string name="page_format">Page %1$d of %2$d</string>
+    <string name="welcome_medimind">Welcome to MediMind</string>
+    <string name="welcome_user">Welcome, %s</string>
+
+</resources>

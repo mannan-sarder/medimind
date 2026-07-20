@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <integer-array name="progress_colors">
+        <item>0xFF000000</item>          <!-- কালো -->
+        <item>0xFF4285F4</item>          <!-- নীল -->
+        <item>0xFF34A853</item>          <!-- সবুজ -->
+        <item>0xFFFBBC05</item>          <!-- হলুদ -->
+        <item>0xFFEA4335</item>          <!-- লাল -->
+    </integer-array>
+</resources>

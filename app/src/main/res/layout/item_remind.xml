@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Layout for a single row in the medicine-reminder list.
+
+    FIX: Replaced <Switch …/> (android.widget.Switch – deprecated API 29)
+    with <androidx.appcompat.widget.SwitchCompat …/>, which is the recommended
+    backward-compatible replacement.  The id and all other attributes are
+    unchanged so RemindAdapter.RemindViewHolder still binds correctly.
+-->
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp"
+    android:paddingTop="14dp"
+    android:paddingBottom="14dp"
+    android:background="?attr/selectableItemBackground">
+
+    <!-- Medicine name -->
+    <TextView
+        android:id="@+id/tvMedicineName"
+        style="@style/TextAppearance.Medimind.Body"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimary"
+        android:text="Medicine Name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/switchActive"
+        app:layout_constraintBottom_toTopOf="@+id/tvTime" />
+
+    <!-- Time label below the medicine name -->
+    <TextView
+        android:id="@+id/tvTime"
+        style="@style/TextAppearance.Medimind.Subtle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:textColor="@color/colorAccentMuted"
+        android:text="08:00 AM"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvMedicineName"
+        app:layout_constraintEnd_toStartOf="@+id/switchActive" />
+
+    <!--
+        FIX: SwitchCompat replaces the deprecated android.widget.Switch.
+        thumbTint and trackTint use the existing brand colour tokens.
+    -->
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/switchActive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:thumbTint="@color/colorAccent"
+        android:trackTint="@color/border_light"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

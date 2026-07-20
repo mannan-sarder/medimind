@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Night-mode colour overrides.
+    Same token names as values/colors.xml — Android auto-picks these when
+    dark mode is active. No layout changes needed.
+
+    STRATEGY
+    ────────
+    colorAccent / colorPrimary: lightened to #7986CB (indigo 300).
+        • As text on #1E1E1E dark bg  → readable (contrast ~4.6:1) ✓
+        • As backgroundTint on Material buttons with white text → still usable ✓
+
+    button_primary drawable: overridden in drawable-night/button_primary.xml
+        to #3949AB (indigo 600) so the solid-background button stays dark
+        enough that white text remains legible.
+
+    background_white: → #1E1E1E  (main dark surface)
+    card_blue_tint:   → #1A237E  (dark indigo card surface)
+    card_green_tint:  → #1B5E20  (dark green card surface)
+    black (#0C1761):  → #C5CAE9  (indigo 100 — text on dark bg)
+-->
+<resources>
+
+    <!-- ── Brand / Accent (lightened for visibility on dark surfaces) ──────── -->
+    <color name="colorPrimary">#9FA8DA</color>
+    <color name="colorAccent">#7986CB</color>
+    <color name="colorAccentMuted">#997986CB</color>
+
+    <!-- ── Primary text token (was navy #0C1761) ────────────────────────────── -->
+    <color name="black">#C5CAE9</color>
+    <color name="black_alpha_13">#22C5CAE9</color>
+
+    <!-- ── Surface / window ─────────────────────────────────────────────────── -->
+    <color name="background_white">#1E1E1E</color>
+
+    <!-- ── Hint / muted text ────────────────────────────────────────────────── -->
+    <color name="text_hint">#7986CB</color>
+    <color name="text_light">#7986CB</color>
+
+    <!-- ── Borders ──────────────────────────────────────────────────────────── -->
+    <color name="border_light">#333949AB</color>
+
+    <!-- ── Nav tab labels ───────────────────────────────────────────────────── -->
+    <color name="active_tab_text">#C5CAE9</color>
+    <color name="active_tab_icon">#C5CAE9</color>
+    <color name="inactive_tab_text">#7986CB</color>
+    <color name="inactive_tab_icon">#7986CB</color>
+
+    <!-- ── Card tints (Compare / Analyze screen cards) ──────────────────────── -->
+    <color name="card_blue_tint">#1A237E</color>
+    <color name="card_green_tint">#1B5E20</color>
+
+    <!-- ── Misc text tokens ─────────────────────────────────────────────────── -->
+    <color name="title_grey">#C5CAE9</color>
+    <color name="tagline_pink">#7986CB</color>
+    <color name="instruction_grey">#7986CB</color>
+    <color name="range_text">#7986CB</color>
+    <color name="result_placeholder">#7986CB</color>
+
+</resources>

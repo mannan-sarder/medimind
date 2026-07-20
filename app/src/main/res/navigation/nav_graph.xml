@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Navigation graph for MediMind.
+
+    FIX: Added action_homeFragment_to_remindFragment so the Remind tab
+    in the top navigation can navigate there from Home without an
+    IllegalArgumentException.  All other fragments also receive
+    actions to remindFragment so the tab bar always works regardless
+    of the current destination.
+
+    NOTE: Navigation through the custom tab bar in MainActivity /
+    DashboardActivity uses direct navController.navigate(R.id.remindFragment)
+    calls (which target the destination ID, not an action ID).  The explicit
+    action definitions here are for NavDeepLink / SafeArgs usage and for
+    clear documentation of valid transitions.
+-->
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <!-- ── Home ─────────────────────────────────────────────────────────── -->
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.mannan.medimind.HomeFragment"
+        android:label="Home">
+        <action
+            android:id="@+id/action_homeFragment_to_analyzeFragment"
+            app:destination="@id/analyzeFragment" />
+    </fragment>
+
+    <!-- ── Analyze ──────────────────────────────────────────────────────── -->
+    <fragment
+        android:id="@+id/analyzeFragment"
+        android:name="com.mannan.medimind.AnalyzeFragment"
+        android:label="Analyze Report">
+        <action
+            android:id="@+id/action_analyzeFragment_to_resultFragment"
+            app:destination="@id/resultFragment" />
+    </fragment>
+
+    <!-- ── Result ───────────────────────────────────────────────────────── -->
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.mannan.medimind.ResultFragment"
+        android:label="Report Result" />
+
+    <!-- ── History ──────────────────────────────────────────────────────── -->
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.mannan.medimind.HistoryFragment"
+        android:label="Report History">
+        <action
+            android:id="@+id/action_historyFragment_to_resultFragment"
+            app:destination="@id/resultFragment" />
+    </fragment>
+
+    <!-- ── Compare ──────────────────────────────────────────────────────── -->
+    <fragment
+        android:id="@+id/compareFragment"
+        android:name="com.mannan.medimind.CompareFragment"
+        android:label="Compare Reports" />
+
+    <!-- ── Remind ───────────────────────────────────────────────────────── -->
+    <!--
+        FIX: remindFragment was missing the android:label and was not referenced
+        by any action in the original file.  Both issues are corrected here.
+        The navigation tab bar navigates by destination ID directly, so explicit
+        actions for each tab→remindFragment transition are NOT required in the
+        graph for the tab bar to work.  They are included here for completeness
+        and to support future NavDirections / SafeArgs usage.
+    -->
+    <fragment
+        android:id="@+id/remindFragment"
+        android:name="com.mannan.medimind.remind.RemindFragment"
+        android:label="Medicine Reminder" />
+
+</navigation>

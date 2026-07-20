@@ -1,0 +1,25 @@
+# Built outputs
+/build
+app/build/
+
+# Gradle cache
+.gradle/
+
+# Local configuration (machine-specific)
+local.properties
+
+# Android Studio / IntelliJ IDEA
+/.idea/
+
+# Compiled module files
+*.iml
+
+# macOS
+.DS_Store
+
+# Native build
+.externalNativeBuild
+.cxx
+
+# Captured logs
+/captures

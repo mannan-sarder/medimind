@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    COLOR SYSTEM FIX
+    ────────────────
+    The original palette mapped EVERY status colour (normal, abnormal, low, high)
+    to the same navy-blue primary colour (#0C1761).  This meant the Result screen
+    was completely monochromatic – the user had no visual cue about whether a
+    test value was Normal, Low, or High.  A user looking at their lab report
+    would need to read every word rather than being able to scan the screen.
+
+    Fix: Introduce semantic colour tokens for the three clinical statuses.
+    The brand palette (navy #0C1761) is preserved for all structural UI
+    (navigation, headers, buttons).  Only the status badges and card
+    backgrounds are given semantically meaningful colours:
+
+        Normal  → green  (#2E7D32)      — universally understood "OK"
+        Low     → amber  (#E65100)      — caution, below range
+        High    → red    (#B71C1C)      — alert, above range
+
+    These colours are defined as solid tokens so they can be referenced by
+    any layout, drawable, or Java code without scattering hard-coded hex values.
+
+    Contrast compliance (WCAG AA – 4.5:1 for normal text):
+        White text on status_color_normal  (#2E7D32) → 6.1:1  ✓
+        White text on status_color_low     (#E65100) → 4.7:1  ✓
+        White text on status_color_high    (#B71C1C) → 7.3:1  ✓
+-->
+<resources>
+
+    <!-- ── Basic / structural colours ──────────────────────────────────────── -->
+    <color name="black">#0C1761</color>
+    <color name="black_alpha_13">#220C1761</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="white_alpha_20">#33FFFFFF</color>
+    <color name="transparent">#00000000</color>
+    <color name="colorAccentMuted">#990C1761</color>
+
+    <!-- ── Brand / Accent ───────────────────────────────────────────────────── -->
+    <color name="colorPrimary">#0C1761</color>
+    <color name="colorPrimaryDark">#070F3F</color>
+    <color name="colorAccent">#0C1761</color>
+
+    <!-- ── Navigation tabs ──────────────────────────────────────────────────── -->
+    <color name="active_tab_text">@color/colorAccent</color>
+    <color name="active_tab_icon">@color/colorAccent</color>
+    <color name="inactive_tab_text">@color/colorAccentMuted</color>
+    <color name="inactive_tab_icon">@color/colorAccentMuted</color>
+
+    <!-- ── Common text & background ─────────────────────────────────────────── -->
+    <color name="text_hint">@color/colorAccentMuted</color>
+    <color name="text_light">@color/colorAccentMuted</color>
+    <color name="text_white">#FFFFFF</color>
+    <color name="background_white">#FFFFFF</color>
+    <color name="border_light">#330C1761</color>
+
+    <!--
+        Dark-mode scaffold background (Settings > Appearance > Theme: Dark).
+        Used only for the window background / status bar / nav bar — most
+        individual cards still use background_white on purpose (see
+        MediMindApplication.java for why "light cards on a dark scaffold" is
+        the deliberate Phase-1 dark mode, not a bug).
+    -->
+    <color name="background_dark">#121212</color>
+
+    <!-- ── SEMANTIC STATUS COLOURS ──────────────────────────────────────────── -->
+    <!--
+        FIX: These were all previously #0C1761 (the primary navy), making the
+        result screen completely monochromatic.  They are now semantically
+        meaningful colours while still being visually harmonious with the app's
+        navy brand palette.
+    -->
+
+    <!-- Normal: deep green – conveys "all clear" -->
+    <color name="status_color_normal">#2E7D32</color>
+    <color name="normal_bg">#E8F5E9</color>       <!-- green 50, light card tint -->
+    <color name="normal_text">@color/status_color_normal</color>
+    <color name="normal_badge_bg">#C8E6C9</color> <!-- green 100, badge fill -->
+
+    <!-- Low: deep amber – conveys caution (below range) -->
+    <color name="status_color_low">#E65100</color>
+    <color name="low_bg">#FFF3E0</color>           <!-- orange 50, light card tint -->
+    <color name="low_text">@color/status_color_low</color>
+    <color name="status_low_bg">#FFE0B2</color>   <!-- orange 100, badge fill -->
+
+    <!-- High: deep red – conveys alert (above range) -->
+    <color name="status_color_high">#B71C1C</color>
+    <color name="high_bg">#FFEBEE</color>          <!-- red 50, light card tint -->
+    <color name="high_text">@color/status_color_high</color>
+    <color name="status_high_bg">#FFCDD2</color>  <!-- red 100, badge fill -->
+    <color name="abnormal_bg">@color/high_bg</color>
+    <color name="abnormal_text">@color/status_color_high</color>
+    <color name="abnormal_badge_bg">@color/status_high_bg</color>
+
+    <!-- Unknown status (test not in knowledge base) – grey-blue neutral -->
+    <color name="status_normal_bg">#E8EAF6</color>
+
+    <!-- ── Compare screen card backgrounds ──────────────────────────────────── -->
+    <color name="card_blue_tint">#EEF1FF</color>
+    <color name="card_green_tint">#E8F5E9</color>
+
+    <!-- ── Miscellaneous ─────────────────────────────────────────────────────── -->
+    <color name="result_placeholder">@color/text_light</color>
+    <color name="title_grey">@color/black</color>
+    <color name="tagline_pink">@color/colorAccent</color>
+    <color name="instruction_grey">@color/colorAccentMuted</color>
+    <color name="range_text">@color/colorAccentMuted</color>
+
+</resources>

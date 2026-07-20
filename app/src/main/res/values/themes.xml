@@ -1,0 +1,21 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Medimind" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Classic + modern: single primary + neutral surfaces -->
+        <item name="colorPrimary">@color/colorAccent</item>
+        <item name="colorOnPrimary">@color/white</item>
+
+        <item name="colorSecondary">@color/colorAccent</item>
+        <item name="colorOnSecondary">@color/white</item>
+
+        <item name="android:windowBackground">@color/background_white</item>
+        <item name="android:statusBarColor">@color/background_white</item>
+        <item name="android:navigationBarColor">@color/background_white</item>
+        <!-- App wide typography -->
+        <item name="android:fontFamily">@font/inter</item>
+        <item name="android:textAppearance">@style/TextAppearance.Medimind.Body</item>
+
+    </style>
+
+    <style name="Theme.Medimind" parent="Base.Theme.Medimind" />
+</resources>

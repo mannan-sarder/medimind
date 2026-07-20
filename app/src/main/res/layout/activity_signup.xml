@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_white"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="24dp">
+
+        <!-- Back Button -->
+        <TextView
+            android:id="@+id/textViewBack"
+            style="@style/TextAppearance.Medimind.Body"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="24dp"
+            android:text="Back"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Logo -->
+        <ImageView
+            android:id="@+id/imageViewLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:contentDescription="MediMind Logo"
+            android:src="@drawable/medimind"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/textViewSignupTitle"
+            style="@style/TextAppearance.Medimind.TitleMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Create a New account"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewLogo" />
+
+        <!-- 1. Full Name -->
+        <EditText
+            android:id="@+id/editTextFullName"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/edit_text_background"
+            android:fontFamily="@font/inter"
+            android:hint="Enter Your Full Name"
+            android:inputType="textPersonName"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/text_hint"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewSignupTitle" />
+
+        <!-- 2. Email -->
+        <EditText
+            android:id="@+id/editTextEmail"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/edit_text_background"
+            android:fontFamily="@font/inter"
+            android:hint="Enter your mail"
+            android:inputType="textEmailAddress"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/text_hint"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@+id/editTextFullName"
+            app:layout_constraintStart_toStartOf="@+id/editTextFullName"
+            app:layout_constraintTop_toBottomOf="@+id/editTextFullName" />
+
+        <!-- 3. Phone -->
+        <EditText
+            android:id="@+id/editTextPhone"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/edit_text_background"
+            android:fontFamily="@font/inter"
+            android:hint="Enter your Phone Number"
+            android:inputType="phone"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/text_hint"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@+id/editTextFullName"
+            app:layout_constraintStart_toStartOf="@+id/editTextFullName"
+            app:layout_constraintTop_toBottomOf="@+id/editTextEmail" />
+
+        <!-- 4. Date of Birth (Clickable, No Keyboard) -->
+        <EditText
+            android:id="@+id/editTextDob"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/edit_text_background"
+            android:clickable="true"
+            android:focusable="false"
+            android:fontFamily="@font/inter"
+            android:hint="Select Date of Birth"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/text_hint"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@+id/editTextFullName"
+            app:layout_constraintStart_toStartOf="@+id/editTextFullName"
+            app:layout_constraintTop_toBottomOf="@+id/editTextPhone" />
+
+        <!-- 5. Gender (Spinner) -->
+        <RelativeLayout
+            android:id="@+id/layoutGender"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/edit_text_background"
+            app:layout_constraintEnd_toEndOf="@+id/editTextFullName"
+            app:layout_constraintStart_toStartOf="@+id/editTextFullName"
+            app:layout_constraintTop_toBottomOf="@+id/editTextDob">
+
+            <Spinner
+                android:id="@+id/spinnerGender"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp" />
+        </RelativeLayout>
+
+        <!-- 6. Address -->
+        <EditText
+            android:id="@+id/editTextAddress"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/edit_text_background"
+            android:fontFamily="@font/inter"
+            android:hint="Enter your Address"
+            android:inputType="textPostalAddress"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/text_hint"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@+id/editTextFullName"
+            app:layout_constraintStart_toStartOf="@+id/editTextFullName"
+            app:layout_constraintTop_toBottomOf="@+id/layoutGender" />
+
+        <!-- 7. Password -->
+        <EditText
+            android:id="@+id/editTextPassword"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/edit_text_background"
+            android:fontFamily="@font/inter"
+            android:hint="Enter your Password"
+            android:inputType="textPassword"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/text_hint"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@+id/editTextFullName"
+            app:layout_constraintStart_toStartOf="@+id/editTextFullName"
+            app:layout_constraintTop_toBottomOf="@+id/editTextAddress" />
+
+        <!-- 8. Confirm Password -->
+        <EditText
+            android:id="@+id/editTextConfirmPassword"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/edit_text_background"
+            android:fontFamily="@font/inter"
+            android:hint="Confirm your Password"
+            android:inputType="textPassword"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/text_hint"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@+id/editTextFullName"
+            app:layout_constraintStart_toStartOf="@+id/editTextFullName"
+            app:layout_constraintTop_toBottomOf="@+id/editTextPassword" />
+
+        <!-- Sign Up Button -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonSignup"
+            style="@style/Widget.Medimind.Button"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/button_primary"
+            android:text="Sign up"
+            android:textColor="@color/text_white"
+            app:layout_constraintEnd_toEndOf="@+id/editTextFullName"
+            app:layout_constraintStart_toStartOf="@+id/editTextFullName"
+            app:layout_constraintTop_toBottomOf="@+id/editTextConfirmPassword" />
+
+        <!-- Already have Account -->
+        <TextView
+            android:id="@+id/textViewHaveAccount"
+            style="@style/TextAppearance.Medimind.Subtle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Already Have a Account?"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonSignup" />
+
+        <!-- Tagline -->
+        <ImageView
+            android:id="@+id/imageViewTagline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:layout_marginBottom="24dp"
+            android:contentDescription="Tagline"
+            android:src="@drawable/your_health_simplified"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewHaveAccount" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

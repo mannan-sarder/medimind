@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Night-mode override for button_primary.
+    Day version uses @color/colorAccent (#0C1761 dark navy) as solid fill — fine
+    on a white background. In dark mode, colorAccent is lightened to #7986CB so
+    text is readable on dark surfaces. That lighter shade is too pale for a
+    button background with white text, so this night drawable uses a fixed
+    mid-range indigo (#3949AB) that works as both a visible button bg AND
+    contrasts well against white button text.
+-->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="#3949AB" />
+    <corners android:radius="10dp" />
+</shape>

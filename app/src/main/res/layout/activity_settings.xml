@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_white"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="32dp">
+
+        <!-- Back Button -->
+        <TextView
+            android:id="@+id/textViewBack"
+            style="@style/TextAppearance.Medimind.Body"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="20dp"
+            android:text="← Back"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/textViewSettingsTitle"
+            style="@style/TextAppearance.Medimind.TitleMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Settings"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewBack" />
+
+        <!-- ── Reminders section ─────────────────────────────────────────── -->
+        <TextView
+            android:id="@+id/labelReminders"
+            style="@style/TextAppearance.Medimind.Subtle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="24dp"
+            android:text="REMINDERS"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewSettingsTitle" />
+
+        <LinearLayout
+            android:id="@+id/cardReminders"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/surface_outline"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="@+id/labelReminders"
+            app:layout_constraintEnd_toEndOf="@+id/labelReminders"
+            app:layout_constraintTop_toBottomOf="@+id/labelReminders">
+
+            <!-- Sound row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="14dp">
+
+                <TextView
+                    style="@style/TextAppearance.Medimind.Body"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Notification Sound" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switchSound"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:thumbTint="@color/colorAccent"
+                    android:trackTint="@color/border_light" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/border_light" />
+
+            <!-- Vibration row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="14dp">
+
+                <TextView
+                    style="@style/TextAppearance.Medimind.Body"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Vibration" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switchVibration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:thumbTint="@color/colorAccent"
+                    android:trackTint="@color/border_light" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textReminderHint"
+            style="@style/TextAppearance.Medimind.Subtle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="Applies to new reminders going forward."
+            app:layout_constraintStart_toStartOf="@+id/cardReminders"
+            app:layout_constraintEnd_toEndOf="@+id/cardReminders"
+            app:layout_constraintTop_toBottomOf="@+id/cardReminders" />
+
+        <!-- ── Appearance section ────────────────────────────────────────── -->
+        <TextView
+            android:id="@+id/labelAppearance"
+            style="@style/TextAppearance.Medimind.Subtle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:text="APPEARANCE"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/cardReminders"
+            app:layout_constraintEnd_toEndOf="@+id/cardReminders"
+            app:layout_constraintTop_toBottomOf="@+id/textReminderHint" />
+
+        <RadioGroup
+            android:id="@+id/radioGroupTheme"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/surface_outline"
+            android:orientation="horizontal"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp"
+            app:layout_constraintStart_toStartOf="@+id/labelAppearance"
+            app:layout_constraintEnd_toEndOf="@+id/labelAppearance"
+            app:layout_constraintTop_toBottomOf="@+id/labelAppearance">
+
+            <RadioButton
+                android:id="@+id/radioThemeLight"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/colorAccent"
+                android:checked="true"
+                android:text="Light"
+                android:textSize="13sp" />
+
+            <RadioButton
+                android:id="@+id/radioThemeDark"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/colorAccent"
+                android:text="Dark"
+                android:textSize="13sp" />
+
+            <RadioButton
+                android:id="@+id/radioThemeSystem"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/colorAccent"
+                android:text="System"
+                android:textSize="13sp" />
+
+        </RadioGroup>
+
+        <!-- ── Language section ──────────────────────────────────────────── -->
+        <TextView
+            android:id="@+id/labelLanguage"
+            style="@style/TextAppearance.Medimind.Subtle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:text="REPORT LANGUAGE"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/radioGroupTheme"
+            app:layout_constraintEnd_toEndOf="@+id/radioGroupTheme"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroupTheme" />
+
+        <RadioGroup
+            android:id="@+id/radioGroupLanguage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/surface_outline"
+            android:orientation="horizontal"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp"
+            app:layout_constraintStart_toStartOf="@+id/labelLanguage"
+            app:layout_constraintEnd_toEndOf="@+id/labelLanguage"
+            app:layout_constraintTop_toBottomOf="@+id/labelLanguage">
+
+            <RadioButton
+                android:id="@+id/radioLangBn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/colorAccent"
+                android:checked="true"
+                android:text="বাংলা"
+                android:textSize="13sp" />
+
+            <RadioButton
+                android:id="@+id/radioLangEn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/colorAccent"
+                android:text="English"
+                android:textSize="13sp" />
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/textLanguageHint"
+            style="@style/TextAppearance.Medimind.Subtle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="Default for Analyze and Compare — you can still switch per scan there."
+            app:layout_constraintStart_toStartOf="@+id/radioGroupLanguage"
+            app:layout_constraintEnd_toEndOf="@+id/radioGroupLanguage"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroupLanguage" />
+
+        <!-- ── Data section ──────────────────────────────────────────────── -->
+        <TextView
+            android:id="@+id/labelData"
+            style="@style/TextAppearance.Medimind.Subtle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:text="DATA"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/radioGroupLanguage"
+            app:layout_constraintEnd_toEndOf="@+id/radioGroupLanguage"
+            app:layout_constraintTop_toBottomOf="@+id/textLanguageHint" />
+
+        <TextView
+            android:id="@+id/buttonClearData"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/surface_outline"
+            android:fontFamily="@font/inter"
+            android:gravity="center"
+            android:padding="14dp"
+            android:text="Clear All History &amp; Reports"
+            android:textColor="@color/status_color_high"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/labelData"
+            app:layout_constraintEnd_toEndOf="@+id/labelData"
+            app:layout_constraintTop_toBottomOf="@+id/labelData" />
+
+        <TextView
+            android:id="@+id/textClearDataHint"
+            style="@style/TextAppearance.Medimind.Subtle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="Permanently deletes every saved report and reminder on this device. This cannot be undone."
+            app:layout_constraintStart_toStartOf="@+id/buttonClearData"
+            app:layout_constraintEnd_toEndOf="@+id/buttonClearData"
+            app:layout_constraintTop_toBottomOf="@+id/buttonClearData" />
+
+        <!-- ── About section ─────────────────────────────────────────────── -->
+        <TextView
+            android:id="@+id/labelAbout"
+            style="@style/TextAppearance.Medimind.Subtle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:text="ABOUT"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/buttonClearData"
+            app:layout_constraintEnd_toEndOf="@+id/buttonClearData"
+            app:layout_constraintTop_toBottomOf="@+id/textClearDataHint" />
+
+        <LinearLayout
+            android:id="@+id/cardAbout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/surface_outline"
+            android:orientation="vertical"
+            android:padding="14dp"
+            app:layout_constraintStart_toStartOf="@+id/labelAbout"
+            app:layout_constraintEnd_toEndOf="@+id/labelAbout"
+            app:layout_constraintTop_toBottomOf="@+id/labelAbout">
+
+            <TextView
+                android:id="@+id/textAppVersion"
+                style="@style/TextAppearance.Medimind.Body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="MediMind v1.0" />
+
+            <TextView
+                style="@style/TextAppearance.Medimind.Subtle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="MediMind works fully offline. Your reports, reminders, and profile stay on this device and are never sent anywhere." />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

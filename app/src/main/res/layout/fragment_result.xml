@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Result screen layout.
+
+    CHANGES FROM ORIGINAL
+    ─────────────────────
+    The original layout had only tvReportTitle (text = "Medical Report") and
+    tvReportDate at the top, with no patient name, gender, age, or report type.
+    The requirement is to show the full patient info header before the test list.
+
+    NEW STRUCTURE
+    ─────────────
+    1. llPatientInfo       – LinearLayout where ResultFragment inflates
+                             layout_result_header.xml (patient info card)
+
+    2. llTestResults       – one item_test_result card per test parameter
+                             (existing, preserved)
+
+    3. tvAbnormalSection   – section title "Abnormal Findings" (hidden when
+                             all results are normal)
+
+    4. llAbnormalFindings  – compact abnormal-findings cards
+
+    5. btnCloseResult      – back navigation
+-->
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_white"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="32dp">
+
+        <!--
+            Patient info header.
+            ResultFragment inflates layout_result_header.xml into this container
+            and populates it with report type, patient name, gender, age, date,
+            and summary.
+        -->
+        <LinearLayout
+            android:id="@+id/llPatientInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+
+        <!--
+            All test-parameter cards are inflated here by ResultFragment.
+            One item_test_result card per test found in the report.
+        -->
+        <LinearLayout
+            android:id="@+id/llTestResults"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="16dp" />
+
+        <!-- Abnormal Findings section header (hidden when all results are normal) -->
+        <TextView
+            android:id="@+id/tvAbnormalSectionTitle"
+            style="@style/TextAppearance.Medimind.TitleMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Abnormal Findings"
+            android:textColor="@color/status_color_high"
+            android:visibility="gone" />
+
+        <!-- Abnormal findings compact cards -->
+        <LinearLayout
+            android:id="@+id/llAbnormalFindings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="8dp" />
+
+        <!-- Back / Close button -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnCloseResult"
+            style="@style/Widget.Medimind.Button"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/button_primary"
+            android:text="Close"
+            android:textColor="@android:color/white" />
+
+    </LinearLayout>
+</ScrollView>

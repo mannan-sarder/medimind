@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="4dp"
+    android:layout_marginEnd="4dp"
+    android:layout_marginTop="4dp"
+    android:layout_marginBottom="4dp"
+    app:cardCornerRadius="15dp"
+    app:cardElevation="2dp"
+    app:cardBackgroundColor="#ffffff">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:gravity="center_vertical">
+
+        <!-- Left column: two-line patient info -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/itemReportName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimary"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:text="Patient Name" />
+
+            <TextView
+                android:id="@+id/itemReportType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:fontFamily="@font/inter"
+                android:textSize="12sp"
+                android:textColor="@color/colorAccentMuted"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:text="Medical Report" />
+
+        </LinearLayout>
+
+        <!-- Date column -->
+        <TextView
+            android:id="@+id/itemDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.4"
+            android:fontFamily="@font/inter"
+            android:textSize="12sp"
+            android:textColor="@color/colorPrimary"
+            android:gravity="center"
+            android:text="01 Jan 2025" />
+
+        <!-- View button -->
+        <Button
+            android:id="@+id/itemViewBtn"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_weight="0.9"
+            android:fontFamily="@font/inter"
+            android:text="View"
+            android:textAllCaps="false"
+            android:textSize="12sp"
+            android:textColor="@color/text_white"
+            android:background="@drawable/gradient_button"
+            android:padding="0dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp" />
+
+        <!-- Delete button -->
+        <Button
+            android:id="@+id/itemDeleteBtn"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="6dp"
+            android:text="🗑"
+            android:textSize="16sp"
+            android:padding="0dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="Delete report" />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

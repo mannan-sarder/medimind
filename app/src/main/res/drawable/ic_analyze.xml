@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Background box -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:startColor="#ffedf3"
+                android:endColor="#ffd0e3"
+                android:angle="135"/>
+            <corners android:radius="18dp"/>
+        </shape>
+    </item>
+
+    <!-- Icon layer -->
+    <item
+        android:left="2dp"
+        android:top="0dp"
+        android:right="2dp"
+        android:bottom="0dp">
+        <vector
+            android:width="32dp"
+            android:height="32dp"
+            android:viewportWidth="52"
+            android:viewportHeight="52">
+
+            <!-- Base line -->
+            <path
+                android:fillColor="#2D3580"
+                android:pathData="M9,40 L43,40 Q44.5,40 44.5,41.5 L44.5,43 L9,43 Q9,43 9,41.5 Z"/>
+
+            <!-- Bar 1 short -->
+            <path
+                android:fillColor="#2D3580"
+                android:pathData="M12,30 Q14,30 14,32 L14,40 L20,40 L20,32 Q20,30 20,30 Z"/>
+
+            <!-- Bar 2 medium -->
+            <path
+                android:fillColor="#2D3580"
+                android:pathData="M23,22 Q25,22 25,24 L25,40 L31,40 L31,24 Q31,22 31,22 Z"/>
+
+            <!-- Bar 3 tall accent -->
+            <path
+                android:fillColor="#6070E8"
+                android:pathData="M34,12 Q36,12 36,14 L36,40 L42,40 L42,14 Q42,12 42,12 Z"/>
+
+            <!-- Trend line -->
+            <path
+                android:fillColor="#00000000"
+                android:strokeColor="#2D3580"
+                android:strokeWidth="2.2"
+                android:strokeLineCap="round"
+                android:strokeLineJoin="round"
+                android:pathData="M12,32 L24,24 L36,14"/>
+
+            <!-- Trend arrowhead -->
+            <path
+                android:fillColor="#2D3580"
+                android:pathData="M33,11 L40,13 L38,20 Z"/>
+
+        </vector>
+    </item>
+
+</layer-list>

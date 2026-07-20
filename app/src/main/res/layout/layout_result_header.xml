@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Patient information card shown at the top of the Result screen.
+    ResultFragment inflates this into llPatientInfo and populates all fields.
+
+    Fields displayed:
+      • Report type    (e.g. "Complete Blood Count (CBC)")
+      • Patient name   (e.g. "Rupchanda Begum" – from OCR header)
+      • Gender / Age   (e.g. "Female  |  34 yrs")
+      • Scan date      (e.g. "25 May 2025, 11:30 AM")
+      • Summary        (e.g. "Found 2 abnormal results." – coloured red/green)
+-->
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="4dp"
+    app:cardCornerRadius="14dp"
+    app:cardElevation="3dp"
+    app:cardBackgroundColor="@color/card_blue_tint">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="18dp">
+
+        <!-- Report type / panel name -->
+        <TextView
+            android:id="@+id/tvHeaderReportType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+            android:text="Medical Report" />
+
+        <!-- Thin divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/border_light" />
+
+        <!-- Patient name -->
+        <TextView
+            android:id="@+id/tvHeaderPatientName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter"
+            android:textSize="14sp"
+            android:textColor="@color/colorPrimary"
+            android:text="Patient: —" />
+
+        <!-- Gender | Age on same line -->
+        <TextView
+            android:id="@+id/tvHeaderGenderAge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/inter"
+            android:textSize="13sp"
+            android:textColor="@color/colorAccentMuted"
+            android:text="Gender: —   |   Age: —" />
+
+        <!-- Scan date -->
+        <TextView
+            android:id="@+id/tvHeaderDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/inter"
+            android:textSize="12sp"
+            android:textColor="@color/colorAccentMuted"
+            android:text="Date: —" />
+
+        <!-- Thin divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/border_light" />
+
+        <!-- Summary (coloured green or red by ResultFragment) -->
+        <TextView
+            android:id="@+id/tvHeaderSummary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:text="All tests are within normal range." />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

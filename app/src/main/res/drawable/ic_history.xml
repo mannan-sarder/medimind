@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Background box -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:startColor="#e4f8f1"
+                android:endColor="#b8ecd8"
+                android:angle="135"/>
+            <corners android:radius="18dp"/>
+        </shape>
+    </item>
+
+    <!-- Icon layer -->
+    <item
+        android:left="2dp"
+        android:top="0dp"
+        android:right="2dp"
+        android:bottom="0dp">
+        <vector
+            android:width="32dp"
+            android:height="32dp"
+            android:viewportWidth="52"
+            android:viewportHeight="52">
+
+            <!-- Clock face fill -->
+            <path
+                android:fillColor="#2D3580"
+                android:fillAlpha="0.12"
+                android:pathData="M26,10 A17,17 0 1,1 25.999,10 Z"/>
+
+            <!-- Clock outer ring -->
+            <path
+                android:fillColor="#00000000"
+                android:strokeColor="#2D3580"
+                android:strokeWidth="3"
+                android:strokeLineCap="round"
+                android:pathData="M26,10 A17,17 0 1,1 25.999,10 Z"/>
+
+            <!-- Inner dial fill -->
+            <path
+                android:fillColor="#FFFFFF"
+                android:fillAlpha="0.5"
+                android:pathData="M26,16 A11,11 0 1,1 25.999,16 Z"/>
+
+            <!-- Tick top -->
+            <path
+                android:fillColor="#2D3580"
+                android:pathData="M24.5,12 L27.5,12 L27.5,17 L24.5,17 Z"/>
+
+            <!-- Tick bottom -->
+            <path
+                android:fillColor="#2D3580"
+                android:pathData="M24.5,37 L27.5,37 L27.5,42 L24.5,42 Z"/>
+
+            <!-- Tick left -->
+            <path
+                android:fillColor="#2D3580"
+                android:pathData="M11,25.5 L16,25.5 L16,28.5 L11,28.5 Z"/>
+
+            <!-- Tick right -->
+            <path
+                android:fillColor="#2D3580"
+                android:pathData="M36,25.5 L41,25.5 L41,28.5 L36,28.5 Z"/>
+
+            <!-- Minute hand -->
+            <path
+                android:fillColor="#00000000"
+                android:strokeColor="#2D3580"
+                android:strokeWidth="2.8"
+                android:strokeLineCap="round"
+                android:pathData="M26,27 L26,17"/>
+
+            <!-- Hour hand accent -->
+            <path
+                android:fillColor="#00000000"
+                android:strokeColor="#6070E8"
+                android:strokeWidth="3.2"
+                android:strokeLineCap="round"
+                android:pathData="M26,27 L33,32"/>
+
+            <!-- Center dot -->
+            <path
+                android:fillColor="#2D3580"
+                android:pathData="M23.5,27 A2.5,2.5 0 1,1 23.499,27 Z"/>
+
+        </vector>
+    </item>
+
+</layer-list>

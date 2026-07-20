@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Centralized text appearances for consistent UI -->
+    <style name="TextAppearance.Medimind.TitleLarge" parent="TextAppearance.AppCompat.Large">
+        <item name="android:fontFamily">@font/inter</item>
+        <item name="android:textSize">28sp</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextAppearance.Medimind.TitleMedium" parent="TextAppearance.AppCompat.Medium">
+        <item name="android:fontFamily">@font/inter</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextAppearance.Medimind.Body" parent="TextAppearance.AppCompat.Body1">
+        <item name="android:fontFamily">@font/inter</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="TextAppearance.Medimind.Subtle" parent="TextAppearance.AppCompat.Caption">
+        <item name="android:fontFamily">@font/inter</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/text_hint</item>
+    </style>
+
+    <style name="Widget.Medimind.Button" parent="Widget.AppCompat.Button">
+        <item name="android:fontFamily">@font/inter</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:textColor">@color/text_white</item>
+    </style>
+
+</resources>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Night-mode theme for MediMind.
+
+    BUG FOUND & FIXED HERE
+    ───────────────────────
+    The previous version of this file defined "Theme.Medimind" with parent
+    Theme.MaterialComponents.Light.NoActionBar — i.e. it re-declared the SAME
+    style name as the day theme but had it extend a LIGHT base theme. Because
+    a values-night/ style with the same name REPLACES the day version
+    entirely (it does not merge/inherit from values/themes.xml), the net
+    effect was: even when the user's device was in system dark mode, the app
+    was still 100% light-themed (white status bar, white window background,
+    "windowLightStatusBar = true"). There was no working dark mode at all.
+
+    This version extends the same DayNight base as the day theme
+    (Base.Theme.Medimind in values/themes.xml) and only overrides what
+    actually needs to differ for night mode: window background, status/nav
+    bar colour, and status-bar icon appearance (light icons on a dark bar).
+
+    SCOPE NOTE: this re-themes the app "scaffold" (status bar, nav bar,
+    window background) correctly. Individual screens still hardcode
+    @color/background_white / @color/black on their cards and text rather
+    than using theme attributes, so cards remain light with dark text inside
+    them — readable, just not "fully" dark yet. See MediMindApplication.java
+    for the longer explanation. A full per-screen dark palette is a separate
+    follow-up task.
+-->
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Theme.Medimind" parent="Base.Theme.Medimind">
+
+        <!-- Brand colours stay the same in dark mode -->
+        <item name="colorPrimary">@color/colorAccent</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/colorAccent</item>
+        <item name="colorOnSecondary">@color/white</item>
+
+        <!-- Dark scaffold -->
+        <item name="android:windowBackground">@color/background_dark</item>
+        <item name="android:statusBarColor">@color/background_dark</item>
+        <item name="android:navigationBarColor">@color/background_dark</item>
+
+        <!-- Light (white) icons on the now-dark status bar -->
+        <item name="android:windowLightStatusBar" tools:ignore="NewApi">false</item>
+
+    </style>
+
+</resources>

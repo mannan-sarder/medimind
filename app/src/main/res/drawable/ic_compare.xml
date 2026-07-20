@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Background box -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:startColor="#f0ecff"
+                android:endColor="#dbd4ff"
+                android:angle="135"/>
+            <corners android:radius="18dp"/>
+        </shape>
+    </item>
+
+    <!-- Icon layer -->
+    <item
+        android:left="2dp"
+        android:top="0dp"
+        android:right="2dp"
+        android:bottom="0dp">
+        <vector
+            android:width="52dp"
+            android:height="52dp"
+            android:viewportWidth="52"
+            android:viewportHeight="52">
+
+            <!-- Left circle fill -->
+            <path
+                android:fillColor="#2D3580"
+                android:fillAlpha="0.15"
+                android:pathData="M20,14 A12,12 0 1,1 19.999,14 Z"/>
+
+            <!-- Left circle outline -->
+            <path
+                android:fillColor="#00000000"
+                android:strokeColor="#2D3580"
+                android:strokeWidth="2.8"
+                android:pathData="M20,14 A12,12 0 1,1 19.999,14 Z"/>
+
+            <!-- Right circle fill -->
+            <path
+                android:fillColor="#6070E8"
+                android:fillAlpha="0.2"
+                android:pathData="M32,14 A12,12 0 1,1 31.999,14 Z"/>
+
+            <!-- Right circle outline -->
+            <path
+                android:fillColor="#00000000"
+                android:strokeColor="#6070E8"
+                android:strokeWidth="2.8"
+                android:pathData="M32,14 A12,12 0 1,1 31.999,14 Z"/>
+
+            <!-- Left arrowhead -->
+            <path
+                android:fillColor="#2D3580"
+                android:pathData="M17,24 L13,26 L17,28 Z"/>
+
+            <!-- Right arrowhead -->
+            <path
+                android:fillColor="#6070E8"
+                android:pathData="M35,24 L39,26 L35,28 Z"/>
+
+        </vector>
+    </item>
+
+</layer-list>

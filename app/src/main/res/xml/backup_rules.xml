@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Backup strategy:
+    - KEEP: Room database (reports, test results, reminders) — user wants
+      history to restore after reinstall.
+    - EXCLUDE: SharedPreferences (MediMindPrefs.xml) only — contains login
+      state and profile data which should NOT restore on a fresh install.
+-->
+<full-backup-content>
+    <exclude domain="sharedpref" path="MediMindPrefs.xml" />
+</full-backup-content>

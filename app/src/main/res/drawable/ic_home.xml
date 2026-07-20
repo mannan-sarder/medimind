@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Background box with gradient -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:startColor="#eceeff"
+                android:endColor="#d4d8ff"
+                android:angle="135"/>
+            <corners android:radius="18dp"/>
+        </shape>
+    </item>
+
+    <!-- Icon layer – padding removed so the icon fills the box completely -->
+    <item
+        android:left="2dp"
+        android:top="0dp"
+        android:right="2dp"
+        android:bottom="0dp">
+        <vector
+            android:width="32dp"
+            android:height="32dp"
+            android:viewportWidth="52"
+            android:viewportHeight="52">
+
+            <!-- Roof -->
+            <path
+                android:fillColor="#00000000"
+                android:strokeColor="#2D3580"
+                android:strokeWidth="3"
+                android:strokeLineCap="round"
+                android:strokeLineJoin="round"
+                android:pathData="M8,28 L26,10 L44,28"/>
+
+            <!-- Chimney -->
+            <path
+                android:fillColor="#2D3580"
+                android:pathData="M33,15 L38,15 L38,23 L33,23 Z"/>
+
+            <!-- House body fill -->
+            <path
+                android:fillColor="#2D3580"
+                android:fillAlpha="0.12"
+                android:pathData="M15,27 L37,27 Q39,27 39,29 L39,44 Q39,46 37,46 L15,46 Q13,46 13,44 L13,29 Q13,27 15,27 Z"/>
+
+            <!-- House body outline -->
+            <path
+                android:fillColor="#00000000"
+                android:strokeColor="#2D3580"
+                android:strokeWidth="3"
+                android:strokeLineCap="round"
+                android:strokeLineJoin="round"
+                android:pathData="M15,27 L15,44 L37,44 L37,27"/>
+
+            <!-- Door -->
+            <path
+                android:fillColor="#6070E8"
+                android:pathData="M21,33 L31,33 L31,44 L21,44 Z"/>
+
+            <!-- Left window -->
+            <path
+                android:fillColor="#6070E8"
+                android:fillAlpha="0.6"
+                android:pathData="M14.5,30 L21.5,30 L21.5,36 L14.5,36 Z"/>
+
+            <!-- Right window -->
+            <path
+                android:fillColor="#6070E8"
+                android:fillAlpha="0.6"
+                android:pathData="M30.5,30 L37.5,30 L37.5,36 L30.5,36 Z"/>
+
+        </vector>
+    </item>
+
+</layer-list>

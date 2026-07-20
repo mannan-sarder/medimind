@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Background shape for the status badge (Normal / Low / High) in item_test_result.xml.
+
+    This is a rounded rectangle with no hard-coded fill colour.
+    The ResultFragment sets the background COLOUR dynamically via:
+        tvStatus.setBackgroundColor(ContextCompat.getColor(ctx, R.color.normal_badge_bg));
+    which tints this shape while preserving its corner radius.
+
+    Usage:
+        android:background="@drawable/status_badge_bg"
+-->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <!-- No fill colour here: set dynamically in ResultFragment -->
+    <corners android:radius="20dp" />
+</shape>
