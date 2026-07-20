@@ -7,6 +7,7 @@
 ---
 
 ## Screenshots
+<img width="4479" height="2141" alt="Cover page" src="https://github.com/user-attachments/assets/d7b352c7-0421-462d-bbc8-3be61eb39e5d" />
 
 > _Add screenshots here_
 
