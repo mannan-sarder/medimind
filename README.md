@@ -6,6 +6,16 @@
 
 ---
 
+## 📥 Download
+
+The APK is available on the [Releases](https://github.com/mannan-sarder/medimind/releases) page.
+
+**[⬇ Download MediMind v1.0.0 APK](https://github.com/mannan-sarder/medimind/releases/tag/v1.0.0)**
+
+No Play Store needed — download the APK, enable "Install from unknown sources" if prompted, and install directly.
+
+---
+
 ## Screenshots
 <img width="4479" height="2141" alt="Cover page" src="https://github.com/user-attachments/assets/d7b352c7-0421-462d-bbc8-3be61eb39e5d" />
 

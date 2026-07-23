@@ -1,6 +1,7 @@
 # Built outputs
 /build
 app/build/
+app/release/
 
 # Gradle cache
 .gradle/
@@ -23,3 +24,9 @@ local.properties
 
 # Captured logs
 /captures
+
+# Keystore
+*.jks
+*.keystore
+*.p12
+/app key*
